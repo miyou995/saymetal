@@ -1,0 +1,283 @@
+{% load static %}
+{% static "img" as baseUrl %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- protection Meta Tags -->
+    <meta name="description" content="Aria is a business focused free HTML landing page template built with Bootstrap to help you create lead generation websites for companies and their services.">
+    <meta name="author" content="Inovatik">
+
+    <!-- Website Title -->
+    <title>saymetal progresse Website</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    {% block lightbox %} {% endblock lightbox %}
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+  
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon"> 
+
+
+</head>
+
+<body>
+
+<div class="page-wrapper">
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <header class="main-header header-style-one">
+        <!--Header Top-->
+        <div class="header-top">
+            <div class="auto-container clearfix">
+                <div class="top-left clearfix">
+                    <div class="text"><span class="icon flaticon-call-answer"></span> Appellez-nous au : <a href="tel:0770 49 66 95" class="number">0770 49 66 95</a></div>
+					
+                </div>
+                <div class="top-right clearfix">
+                    <!-- Info List -->
+					<ul class="info-list">
+                        <li><a href="mailto:contact@saymetal-dz.com"> contact@saymetal-dz.com</a></li>
+                        
+						<li>Cité nadjah N°02 Chiffa </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Header Top -->
+
+        <!-- Header Upper -->
+        <div class="header-upper">
+            <div class="inner-container">
+                <div class="auto-container clearfix">
+                    <!--Info-->
+                    <div class="logo-outer">
+                        <div class="logo"><a href="index.html"><img src="{% static 'images/background/logo.png' %}" width="60" alt="logo saymetal" title=""></a></div>
+                    </div>
+
+                    <!--Nav Box-->
+                    <div class="nav-outer clearfix">
+                        <!--Mobile Navigation Toggler For Mobile--><div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
+                        <nav class="main-menu navbar-expand-md navbar-light">
+                            <div class="navbar-header">
+                                <!-- Togg le Button -->      
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="icon flaticon-menu-1"></span>
+                                </button>
+                            </div>
+                            
+                            <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li 
+                                        {% if request.path == '/' %}
+                                            class="current dropdown"
+                                        {% else %}
+                                            class="dropdown "
+                                        {% endif %}
+                                    >
+                                    <a href="{% url 'index' %}">Accueil</a>
+                                    </li>
+                                    <li 
+                                        {% if '/about/' == request.path %}
+                                            class="current dropdown"
+                                        {% else %}
+                                            class="dropdown "
+                                        {% endif %}
+                                    ><a href="{% url 'about' %}">A propos</a>
+                                    </li>
+                                    <li
+                                        {% if request.path == '/produits/' %}
+                                            class="current dropdown"
+                                        {% else %}
+                                            class="dropdown "
+                                        {% endif %}
+                                    >
+                                    <a href="{% url 'products' %}">Produits</a>
+                                    </li>
+                                    <li
+                                        {% if request.path == '/contact/' %}
+                                            class="current dropdown"
+                                        {% else %}
+                                            class="dropdown "
+                                        {% endif %}
+                                    >
+                                    <a href="{% url 'contact' %}">Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Header Upper-->
+
+    	<!-- Mobile Menu  -->
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            <div class="close-btn"><span class="icon flaticon-cancel"></span></div>
+            
+            <nav class="menu-box">
+                <div class="nav-logo"><a href="#"><img src="{% static 'images/background/logo.png' %}" width="80" alt="" title=""></a></div>
+                <ul class="navigation clearfix"><!--Keep This Empty / Menu will come through Javascript--></ul>
+				<!--Social Links-->
+				<div class="social-links">
+					<ul class="clearfix">
+						<li><a href="#"><span class="fab fa-twitter"></span></a></li>
+						<li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+						<li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+						<li><a href="#"><span class="fab fa-instagram"></span></a></li>
+						<li><a href="#"><span class="fab fa-youtube"></span></a></li>
+					</ul>
+                </div>
+            </nav>
+        </div><!-- End Mobile Menu -->
+
+    </header>
+    <!-- End Main Header -->
+
+
+
+{% block content %}
+  
+{% endblock content %}
+
+
+    
+	<!--Main Footer-->
+    <footer class="main-footer">
+		<div class="auto-container">
+        	<!--Widgets Section-->
+            <div class="widgets-section">
+            	<div class="row clearfix">
+                	
+                    <!--big column-->
+                    <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="row clearfix">
+                        
+                            <!--Footer Column-->
+                            <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                                <div class="footer-widget logo-widget">
+									<div class="logo">
+                                    	<a href="{% url 'index' %}"><img src="{% static 'images/background/logo.png' %}" width="80" alt="" /></a>
+                                    </div>
+                                    <div class="text">SAY METAL Algérie est une societé de rayonnage métalique et étagéres</div>
+                                    <ul class="social-icons">
+                                        <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                                        <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fab fa-google-plus-g"></span></a></li>
+                                    </ul>
+								</div>
+							</div>
+							
+							<!--Footer Column-->
+                            <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                                <div class="footer-widget links-widget">
+                                	<h2>Liens rapides</h2>
+									<div class="widget-content">
+										<ul class="list">
+                                        	<li><a href="#">Accueil</a></li>
+                                            <li><a href="#">A propos</a></li>
+                                            <li><a href="#">Produits</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
+                                    </div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+					
+					<!--big column-->
+                    <div class="big-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="row clearfix">
+                        
+                            <!--Footer Column-->
+                            <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+                                <div class="footer-widget contact-widget">
+									<h2>Contact Info</h2>
+									<div class="widget-content ">
+										<a href="tel:0770 49 66 95" class="contact-number d-block">+213 770 49 66 95</a>
+										<a href="tel:0770 50 17 23" class="contact-number d-block">+213 770 50 17 23</a>
+										<ul>
+											<li>Cité naDjah N° 02 Chiffa</li>
+											<li>Email : <a href="mailto:contact@saymetal-dz.com"> contact@saymetal-dz.com</a></li>
+											<li class="d-flex">Fix:<a href="tel:025 24 42 87" >  025 24 42 87</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+							<!--Footer Column-->
+                            <div class="footer-column col-lg-5 col-md-6 col-sm-12">
+                                <div class="footer-widget newsletter-widget">
+                                	<h2>Notre gamme</h2>
+									<div class="widget-content">
+										<ul class="list">
+                                        	<li><a class="text" href="#">Rayonnages lourds</a></li>
+                                            <li><a class="text" href="#">Rayonnages mi-lourd</a></li>
+                                            <li><a class="text" href="#">Rayonnages léger</a></li>
+                                            <li><a class="text" href="#">Protection</a></li>
+                                            <li><a class="text" href="#">Accessoires</a></li>
+                                        </ul>
+                                    </div>
+									<!-- Newsletter Form -->
+									
+								</div>
+							</div>
+						
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<!--Footer Bottom-->
+            <div class="footer-bottom clearfix">
+                <div class="pull-left">
+                    <div class="Copyright"><a href="octopus-consulting.com">Octopus Consulting</a></div>
+                </div>
+               
+            </div>
+			
+		</div>
+	</footer>
+	
+</div>  
+
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+
+
+<!--Scroll to top-->
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/jquery-ui.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+<!-- <script src="{% static 'js/js/isotope.pkgd.min.js' %}"></script> -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="{% static 'js/lightbox.scripts.js' %}"></script>
+<script src="{% static 'js/owl.js' %}"></script>
+<script src="{% static 'js/wow.js' %}"></script>
+<script src="{% static 'js/appear.js' %}"></script>
+<script src="{% static 'js/scrollbar.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+
+<!-- stella-orre/  30 Nov 2019 03:45:45 GMT -->
+</html>

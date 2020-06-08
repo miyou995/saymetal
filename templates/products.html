@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+        
+{% load static %}
+{% static "img" as baseUrl %}
+{% block lightbox %}
+  <link rel="stylesheet" href="{% static 'css/lightbox.styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+{% endblock lightbox %}
+{% block content %}
+  
+    <div class="sidebar-page-container">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+
+                 <div class="sidebar-side col-xl-3 col-lg-4 col-md-12 col-sm-12">
+					<aside class="sidebar">
+						<!-- Sidebar Widget / List Widget-->
+                        <div class="sidebar-widget list-widget">
+							<!-- Services List -->
+							<ul class="services-list ">
+								{% for product in products %}
+                                    {% if product.active %}
+                                        <li><a class="popup-with-move-anim" href="#project-{{product.pk}}">{{product.name}}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+							</ul>
+						</div>
+					</aside>
+                </div>
+                
+
+                <div class="content-side col-xl-9 col-lg-8 col-md-12 col-sm-12">    
+                    <div id="projects" class="filter">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h1 class="text-center mb-5">Notre gamme de rayonnage métalique</h1>
+                                </div> <!-- end of col -->
+                            </div> <!-- end of row -->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <!-- Filter -->
+                                    <div class="button-group filters-button-group">
+                                        <a class="button is-checked" data-filter="*"><span>Afficher tout</span></a>
+                                        <a class="button" data-filter=".lourds"><span>Rayonnages lourds</span></a>
+                                        <a class="button" data-filter=".mi-lourd"><span>Rayonnages mi-lourd</span></a>
+                                        <a class="button" data-filter=".léger"><span>Rayonnages léger</span></a>
+                                        <a class="button" data-filter=".Protection"><span>Protection</span></a>
+                                        <a class="button" data-filter=".Accessoires"><span>Accessoires</span></a>
+                                    </div> <!-- end of button group -->
+
+
+                                    <div class="grid">
+                                        {% for product in products %}   
+                                            {% if product.active %}
+                                                <div class="element-item {{product.get_category_display}} " >
+                                                    <a class="popup-with-move-anim" href="#project-{{product.pk}} ">
+                                                        <div class="element-item-overlay">
+                                                            <span>{{product.name}}</span>
+                                                        </div>
+                                                        <img src="{{product.image.url}}" alt="alternative">
+                                                    </a>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div> <!-- end of grid -->
+
+                                    <!-- end of filter -->
+                                    
+                                </div> <!-- end of col -->
+                            </div> <!-- end of row -->
+                        </div> <!-- end of container -->
+                    </div> <!-- end of filter -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {% for product in products %}   
+        {% if product.active %}
+            <div id="project-{{product.pk}}" class="lightbox-basic zoom-anim-dialog mfp-hide">
+                <div class="row">
+                    <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+                    <div class="col-lg-8">
+                        <img class="img-fluid" src="{{product.image.url}}" alt="alternative">
+                    </div> <!-- end of col -->
+                    <div class="col-lg-4">
+                        <h3>{{product.name}}</h3>
+                            <hr class="line-heading">
+                        <p>{{product.description}}</p>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of lightbox-basic -->
+        {% endif %}
+    {% endfor %}
+{% endblock content %}

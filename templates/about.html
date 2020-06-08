@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+        
+{% load static %}
+{% static "img" as baseUrl %}
+{% block content %}
+  
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url('/static/images/background/about.jpg')">
+    	<div class="auto-container">
+        	<h2>SAY METAL <br> une efficacité reconnue </h2>
+            <ul class="page-breadcrumb">
+            	<li><a href="{% url 'index' %}">home</a></li>
+            	<li><a href="{% url 'about' %}">Notre Histoire</a></li>
+				
+            </ul>
+        </div>
+    </section>
+    <!--End Page Title-->
+	
+	<!--Sidebar Page Container-->
+    <div class="sidebar-page-container">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+            	
+				<!--Content Side / Services Detail -->
+                <div class="content-side col-xl-9 col-lg-8 col-md-12 col-sm-12">
+                	<div class="services-detail">
+						<div class="inner-box">
+							<div class="bold-text">Say METAL confectionne des pièces sur plan et une découpe a la hauteur ou
+                                longeur de vos besoins</div>
+							<div class="text">
+								<p>Existe depuis 2012 SAY METAL  a sue se perfectionnée au fil des années et
+                                    gagné la confiance de notre clientèle  , innovation et création, étude
+                                    suivie et conseils afin  de satisfaire la  demande de nos aimable client et
+                                    leurs trouvé la meilleurs solution de stockage .</p>
+								<p>Vos commande seront livrée directement dans votre entreprise ou sur votre
+                                    chantier dans les meilleurs délais en collaboration avec une messagerie
+                                    expresse nous assurons la livraisons rapide en fiable de vos marchandise
+                                    quel que soit le jours de la semaine avec simplicité et efficacité dans le
+                                    choix des tarifs.</p>
+								<!-- Two Column -->
+								<div class="two-column">
+									<div class="row clearfix">
+									
+										<div class="content-column ">
+											<div class="inner-column">
+												<h3>BESOIN DE VOUS ORGANISER OPTIPISER VOTRE ESPCAE  ? <br> faites appel à SAYMETAL </h3>
+												<p>Nos équipes de techniciens confirmés vous accueillent et vous conseillent
+                                                    tous les jours.</p>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+								<h4>Nous vous offrons la garantie d'un service personnalisé et rapide et la
+                                    possibilité de discuter technique avec nos équipes</h4>
+							
+								<div class="service-contact-box">Nous optimiserons votre espace.<br> <a href="{% url 'contact' %}">Contactez-nous</a> <span class="ensavoir"> pour en savoir plus</span></div>
+							</div>
+						</div>
+                    </div>
+                   
+                    
+				</div>
+				
+				<!--Sidebar Side-->
+				<div class="sidebar-side col-xl-3 col-lg-4 col-md-12 col-sm-12">
+					<aside class="sidebar">
+						
+						<!-- Sidebar Widget / List Widget-->
+                        <div class="sidebar-widget list-widget">
+							<!-- Services List -->
+							<ul class="services-list">
+								<li><a href="{% url 'products' %}">Rayonnage Lourd</a></li>
+								<li><a href="{% url 'products' %}">Rayonnages mi-lourd</a></li>
+								<li><a href="{% url 'products' %}">Rayonnages léger </a></li>
+								<li><a href="{% url 'products' %}">étageres</a></li>
+								<li><a href="{% url 'products' %}">accessoires</a></li>
+								
+							</ul>
+						</div>
+						
+						<!-- Sidebar Widget / Contact Widget-->
+                        <div class="sidebar-widget contact-widget">
+							<div class="widget-content" style="background-image: url(/static/images/background/7.jpg);">
+								<h3>Demandez un devis gratuit</h3>
+								<a href="{% url 'contact' %}" class="theme-btn btn-style-one"><span class="txt">contact us</span></a>
+							</div>
+						</div>
+					
+					</aside>
+				</div>
+				
+			</div>
+		</div>
+    </div>
+    <h2 class="text-center">Nos références</h2>
+
+    <div id="references">
+        <div class="container">
+            
+            <div class="row mb-3 p-3">
+                {% for ref in references %}
+                <div class="col-3 col-sm-2 col-md-2 col-lg-2">
+                    <img class="logo-reference"width="150" src="{{ref.image.url}}" alt="">
+                </div>
+
+                {% endfor %}
+         
+
+
+            </div>
+        </div>
+        
+    </div>
+{% endblock content %}
+	

@@ -1,0 +1,252 @@
+{% extends "base.html" %}
+{% load static %}
+{% static "img" as baseUrl %}
+
+
+
+
+
+
+{% block content %}
+  
+    <!-- Main Slider -->
+	<section class="main-slider">
+		<div class="slider-box">
+		
+			<!-- Banner Carousel -->
+			<div class="banner-carousel owl-theme owl-carousel">
+			
+				<!-- Slide -->
+				<div class="slide">
+					<div class="image-layer">
+						<img src="{% static 'images/main-slider/1.jpg' %}" alt="" srcset="">
+					</div>
+					<div class="auto-container">
+						<div class="content">
+							<h2>Rayonnages <br> Lourd</h2>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Slide -->
+				<div class="slide">
+					<div class="image-layer">
+						<div class="image-layer">
+							<img src="{% static 'images/main-slider/2.jpg' %}" alt="" srcset="">
+						</div>
+					</div>
+					<div class="auto-container ml-4">
+						<div class="content ">
+							<h2>Rayonnages <br> Mi-Lourd</h2>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Slide -->
+				<div class="slide">
+					<div class="image-layer"">
+						<div class="image-layer">
+							<img src="{% static 'images/main-slider/3.jpg' %}" alt="" srcset="">
+						</div>
+					</div>
+					<div class="auto-container">
+						<div class="content">
+							<h2>Rayonnages <br> Leger</h2>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+	<!-- End Banner Section -->
+	
+	<!-- Services Section -->
+	<section class="services-section">
+		<div class="auto-container">
+			<!-- Title Box -->
+			<div class="title-box">
+				<h2>Découvrez notre gamme de produits.</h2>
+			</div>
+			
+			<div class="row clearfix">
+				
+				<!-- Service Block -->
+				<div class="service-block col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="image">
+							<a href="{% url 'products' %}"><img src="static/images/background/13.jpg" alt="" /></a>
+						</div>
+						<div class="lower-content">
+							<h3><a href="#">Rayonnages lourds</a></h3>
+							<div class="text">Le rayonnage métallique lourd permet de stocker des produits encombrants avec une charge lourde</div>
+							
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="image">
+							<a href="{% url 'products' %}"><img src="static/images/background/13.jpg" alt="" /></a>
+						</div>
+						<div class="lower-content">
+							<h3><a href="{% url 'products' %}">Rayonnages mi-lourd</a></h3>
+							<div class="text">Le rayonnage semi-lourd est une solution de rangement modulable, à destination des entreprises et des industriels, permettant d’entreposer facilement des articles volumineux ainsi que des charges plus ou moins lourdes.</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="image">
+							<a href="{% url 'products' %}"><img src="static/images/background/13.jpg" alt="" /></a>
+						</div>
+						<div class="lower-content">
+							<h3><a href="{% url 'products' %}">Rayonnages léger</a></h3>
+							<div class="text">Le rayonnage léger est idéal pour le stockage d’archives, de cartons, pour l’atelier…</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+	<!-- End Services Section -->
+	
+	
+	
+
+	
+	<!-- Fluid Section One -->
+    <section class="fluid-section-one">
+    	<div class="outer-container clearfix">
+        	
+			<!--Content Column-->
+			<div class="content-column">
+				<div class="content-box">
+					<h2>A propos de saymetal</h2>
+					<div class="text">Existe depuis 2012 SAY METAL  a sue se perfectionnée au fil des années et
+						gagné la confiance de notre clientèle  , innovation et création, étude
+						suivie et conseils afin  de satisfaire la  demande de nos aimable client et
+						leurs trouvé la meilleurs solution de stockage.</div>
+					<ul class="list-style-one">
+						<li>Rayonnages lourds</li>
+						<li>Rayonnages mi-lourde</li>
+						<li>Rayonnages léger</li>
+						<li>Protection</li>
+						<li>Accessoires</li>
+						<li>Conseils</li>
+					</ul>
+					<div class="bold-text">BESOIN D'OPTIPISER VOTRE ESPCAE ? <br> <a href="{% url 'contact' %}">Appellez-nous</a></div>
+				</div>
+			</div>
+			
+			<!--Image Column-->
+        	<div class="image-column" style="background-image: url(static/images/background/1.jpg)">
+				<div class="inner-column">
+				<!--	<div class="image">
+						<img src="static/images/background/11.jpg" alt="">
+					</div> -->
+					<a href="https://www.youtube.com/watch?v=nKP9gkUBZlc" class="overlay-link lightbox-image">
+						<div class="icon-box">
+							<span class="icon flaticon-play-button"></span>
+                            <i class="ripple"></i>
+						</div>
+					</a>
+				</div>
+            </div>
+            <!--End Image Column-->
+			
+		</div>
+	</section>
+	<!-- Featured Section -->
+	<section class="featured-section" style="background-image: url(static/images/background/2.jpg)">
+		<div class="auto-container">
+			<!-- Title Box -->
+			<div class="title-box">
+				<h2>Notre processus de travail</h2>
+			</div>
+			
+			<div class="row clearfix">
+				
+				<!-- Feature Block -->
+				<div class="feature-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="icon-outer">
+							<div class="icon-box">
+								<span class="icon flaticon-hand-shake"></span>
+							</div>
+							<div class="feature-number">1</div>
+						</div>
+						<div class="lower-content">
+							<h3><a href="#">Prise de contact</a></h3>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Feature Block -->
+				<div class="feature-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInLeft" data-wow-delay="250ms" data-wow-duration="1500ms">
+						<div class="icon-outer">
+							<div class="icon-box">
+								<span class="icon flaticon-answer"></span>
+							</div>
+							<div class="feature-number">2</div>
+						</div>
+						<div class="lower-content">
+							<h3><a href="#">étude et conseils</a></h3>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Feature Block -->
+				<div class="feature-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInLeft" data-wow-delay="500ms" data-wow-duration="1500ms">
+						<div class="icon-outer">
+							<div class="icon-box">
+								<span class="icon flaticon-sketch"></span>
+							</div>
+							<div class="feature-number">3</div>
+						</div>
+						<div class="lower-content">
+							<h3><a href="#">Création de Plan</a></h3>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Feature Block -->
+				<div class="feature-block col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInLeft" data-wow-delay="750ms" data-wow-duration="1500ms">
+						<div class="icon-outer">
+							<div class="icon-box">
+								<span class="icon flaticon-house-1"></span>
+							</div>
+							<div class="feature-number">4</div>
+						</div>
+						<div class="lower-content">
+							<h3><a href="#">Réalisation</a></h3>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+	<!-- End Featured Section -->
+	
+	<!-- Call To Action Section -->
+	<section class="call-to-action-section" style="background-image: url(static/images/background/1.jpg)">
+		<div class="auto-container">
+			<h2>Pensez à optimiser votre éspace</h2>
+			<a href="{% url 'contact' %}" class="theme-btn btn-style-two"><span class="txt">contact us</span></a>
+		</div>
+	</section>
+	<!-- End Call To Action Section -->
+{% endblock content %}
+	
