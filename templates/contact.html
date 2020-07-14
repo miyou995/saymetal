@@ -2,7 +2,10 @@
         
 {% load static %}
 {% static "img" as baseUrl %}
-
+{% block meta %}
+<title>saymetal commander mon rayonnage</title>
+<meta name="description" content="Contacter nous directement via notre siteweb, et nous vous rappellerons dans les meilleurs delais">
+{% endblock meta %}
 
 
 	{% block content %}
@@ -46,11 +49,11 @@
 								{% csrf_token %}
 								<div class="row clearfix">
 									<div class="form-group col-lg-6 col-md-6 col-sm-12">
-										<input type="text" name="name" placeholder="Your name" required>
+										<input type="text" name="name" placeholder="Votre nom" required>
 									</div>
 									
 									<div class="form-group col-lg-6 col-md-6 col-sm-12">
-										<input type="text" name="email" placeholder="Email address" required>
+										<input type="text" name="email" placeholder="Email" required>
 									</div>
 									
 									<div class="form-group col-lg-12 col-md-12 col-sm-12">
@@ -77,21 +80,21 @@
 				<!-- Info Column -->
 				<div class="info-column col-lg-5 col-md-12 col-sm-12">
 					<div class="inner-column">
-						
+
 						<!-- Contact Info List -->
 						<ul class="contact-info-list">
 							<li><strong>Addresse :</strong><br>Cité nadjah N°02 Chiffa</li>
 						</ul>
 						<!-- Contact Info List -->
 						<ul class="contact-info-list">
-							<li><strong>Phone : </strong><a href="tel:1800-456-7890">1800 456 7890</a></li>
-							<li><strong>Email : </strong><a href="mailto:info@stellaorre.com">info@stellaorre.com</a></li>
+							<li><strong>Téléphone : </strong><a href="tel: 0770 49 66 95"> 0770 49 66 95</a></li>
+							<li><strong>Email : </strong><a href="mailto:info@stellaorre.com">contact@saymetal-dz.com</a></li>
 						</ul>
 						<!-- Contact Info List -->
 						<ul class="contact-info-list">
-							<li><strong>Opening Hours :</strong><br>8:00 AM – 10:00 PM <br> Monday – Sunday</li>
+							<li><strong>heures d'ouverture :</strong><br>8:00 h – 17:00 h <br> Dimanche – Jeudi</li>
 						</ul>
-						
+				
 					</div>
 				</div>
 				
@@ -108,4 +111,8 @@
     <!-- End Map Section -->
 
       
-    {% endblock content %}
+	{% endblock content %}
+	
+
+
+

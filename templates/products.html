@@ -2,6 +2,10 @@
         
 {% load static %}
 {% static "img" as baseUrl %}
+{% block meta %}
+<title>saymetal gamme de produits</title>
+<meta name="description" content="Saymetal dispose d'une large gamme de produits dans le secteur du rayonnage, rayonnage lourd, rayonnage semi-lourd et rayonnage leger en algérie.">
+{% endblock meta %}
 {% block lightbox %}
   <link rel="stylesheet" href="{% static 'css/lightbox.styles.css' %}">
   <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">

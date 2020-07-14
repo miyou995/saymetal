@@ -1,4 +1,3 @@
-console.log('sdkgvfndsklv');
 
 (function($) {
 	"use strict";
